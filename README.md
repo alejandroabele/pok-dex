@@ -44,5 +44,5 @@ https://axios-http.com/docs/intro
 
 * Quasar
 
-Quasar es un super framework basado en VueJS que nos permite optimizar tiempos y costos de desarrollo 
+Quasar es un super framework basado en VueJS que nos permite optimizar tiempos y costos de desarrollo.
 https://quasar.dev/introduction-to-quasar
