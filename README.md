@@ -1,6 +1,10 @@
 # Quasar App (pokedex)
 
 A Quasar Framework app
+## Install Quasar global
+```bash
+npm install -g @quasar/cli
+```
 
 ## Install the dependencies
 ```bash
