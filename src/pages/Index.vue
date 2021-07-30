@@ -56,7 +56,7 @@ export default defineComponent({
   position: relative;
   height: 100px;
   width: 100px;
-  margin-top: 40%;
+  margin-top: 20%;
   background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
   border-radius: 50%;
   border: 8px solid black;

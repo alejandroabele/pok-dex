@@ -5,7 +5,7 @@
         <q-space />
         <q-btn outline icon="close" color="grey" round dense v-close-popup />
 
-        <q-img src=~assets/pokemon.png />
+        <q-img style="width:250px" src=~assets/pokemon.png />
       </q-card-section>
 
       <q-card-section class="text-h6">
@@ -26,6 +26,7 @@
             style="width: 100%"
             label="Share to my friends"
             color="primary"
+            @click="copyClipboard()"
           />
         </div>
         <div class="col-4 text-right q-pr-lg">
@@ -138,6 +139,7 @@
 </template>
 
 <script>
+import { copyToClipboard } from "quasar";
 import { ref } from "vue";
 
 export default {
@@ -167,6 +169,18 @@ export default {
     this.filterAutocomplete();
   },
   methods: {
+    copyClipboard() {
+      copyToClipboard(`${this.details.name}, ${this.details.types}`)
+        .then(() => {
+          this.$q.notify({
+            message: "Copy to clipboard",
+            type: "positive",
+          });
+        })
+        .catch(() => {
+          // fail
+        });
+    },
     filterAutocomplete() {
       if (this.filter == "") {
         this.itemsFilter = this.items;
