@@ -3,9 +3,15 @@
     <q-card style="width: 450px">
       <q-card-section class="row items-center q-pb-none">
         <q-space />
-        <q-btn outline icon="close" color="grey" round dense v-close-popup />
+        <div class="col-12 text-right" >
+          <q-btn outline icon="close" color="grey" round dense v-close-popup />
+        </div>
 
-        <q-img style="width:250px" src=~assets/pokemon.png />
+        <q-img
+          v-if="details && details.img"
+          style="width: 200px"
+          :src="details.img"
+        />
       </q-card-section>
 
       <q-card-section class="text-h6">
@@ -40,7 +46,6 @@
       </q-card-actions>
     </q-card>
   </q-dialog>
-
   <div style="width: 600px; height: 100%" class="row q-col-gutter-md">
     <div class="col-12 header">
       <q-input
@@ -216,6 +221,7 @@ export default {
         "pokemon/obtenerPokemon",
         item.name
       );
+      console.log(this.details);
     },
     goHome() {
       this.filter = "";

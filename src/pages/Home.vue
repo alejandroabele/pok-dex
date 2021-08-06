@@ -1,6 +1,7 @@
 <template>
   <q-page class="flex flex-center">
-    <ListPokemon />
+    <ListPokemon>
+    </ListPokemon>
   </q-page>
 </template>
 

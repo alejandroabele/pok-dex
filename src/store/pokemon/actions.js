@@ -35,6 +35,7 @@ export async function obtenerPokemon({ commit, state }, value) {
     data.height = response.data.height;
     data.weight = response.data.weight;
     data.name = response.data.name;
+    data.img = response.data.sprites.other["official-artwork"].front_default;
     if (response.data.types) {
       let auxTypes = "";
       const len = response.data.types.length;
